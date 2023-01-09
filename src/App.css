@@ -1,0 +1,28 @@
+nav{
+  
+  background-color: black;
+  padding: 16px 32px;
+}
+nav a{
+  color: aliceblue;
+  margin-right: 16px;
+}
+.nav-color{
+  color:rgb(174, 179, 174);
+  background-color: black;
+
+}
+.nav-colors{
+  color:rgb(174, 179, 174);
+  background-color: black;
+ }
+ .btn-color{
+  color: blanchedalmond;
+  background-color: black;
+ }
+body{
+  background-color: rgb(209, 217, 217);
+}
+.bg-register{
+  background-color: beige;
+}
