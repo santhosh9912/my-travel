@@ -20,7 +20,7 @@ export const Home = () => {
     }, [])
 
 
-    const deleteuser =  async (id) => {
+    const deleteuser = async (id) => {
         const res2 = await fetch(`http://1to21.com/api/deleteuser/${id}`,
             {
                 method:'DELETE',
@@ -34,7 +34,7 @@ export const Home = () => {
         // console.log(deletdata);
         if (res2.status === 422 || !deletdata) {
             console.log('error');
-            alert(error)
+            alert('error')
         }else {
             toast.success("user Deleted !!!" , {
                 position: toast.POSITION.BOTTOM_RIGHT,

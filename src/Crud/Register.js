@@ -4,7 +4,7 @@ import {toast }from 'react-toastify'
 
 
 export const Register=()=>{
-    const navigate=useNavigate()
+    const navigate=useNavigate();
     const[formdetails,setformdetails]=useState({
         name:'',
         email:'',
@@ -15,7 +15,7 @@ export const Register=()=>{
         gender:'',
     });
     const setdata=(e)=>{
-        const{name,value}=e.target;
+        const {name,value}=e.target;
         setformdetails(previousstate=>{
             return{
                 ...previousstate,
@@ -25,11 +25,11 @@ export const Register=()=>{
     };
   const submitform=async(e)=>{
       e.preventDefault();
-      const{name,email,age,mobile,work,location,gender}=formdetails;
-      const res=await fetch("http://1to21.com/api/register",{
+      const {name,email,age,mobile,work,location,gender}=formdetails;
+      const res= await fetch("http://1to21.com/api/register",{
         method: "POST",
         headers: {
-          'Content-Type':'application/JSON',
+          'Content-Type': 'application/JSON',
         },
         body:JSON.stringify({
           name,
@@ -41,7 +41,7 @@ export const Register=()=>{
           gender,
         }),
       });
-      const data=await res.json();
+      const data = await res.json();
       if(res.status === 422 || !data){
         console.log("error");
         alert("error")
